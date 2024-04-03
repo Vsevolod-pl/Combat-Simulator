@@ -1,0 +1,76 @@
+{
+    "name": "vehicle template",
+    "icon": "./img.jpg",
+    "scheme": "./sample.png",
+    "systems": {
+        "sys1": {
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        },
+        "sys2": {
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        },
+        "sys3": {
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        },
+        "sys4": {
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        }
+    },
+    "projections": {
+        "proj1":{
+            "sec1": {
+                "hit_prob":0.5,
+                "systems": ["sys1", "sys3"],
+                "probs":{
+                    "miss": 0.2,
+                    "sys1": 0.1,
+                    "sys3": 0.1,
+                    "sys1+sys3": 0.6
+                }
+            },
+            "sec2": {
+                "hit_prob":0.5,
+                "systems": ["sys2", "sys4"],
+                "probs":{
+                    "miss": 0.2,
+                    "sys4": 0.1,
+                    "sys2": 0.1,
+                    "sys4+sys2": 0.6
+                }
+            }
+        },
+        "proj2":{
+            "sec3": {
+                "hit_prob":0.5,
+                "systems": ["sys1", "sys2"],
+                "probs":{
+                    "miss": 0.2,
+                    "sys1": 0.1,
+                    "sys2": 0.1,
+                    "sys1+sys2": 0.6
+                }
+            },
+            "sec_lol": {
+                "hit_prob":0.5,
+                "systems": ["sys3", "sys4"],
+                "probs":{
+                    "miss": 0.2,
+                    "sys4": 0.1,
+                    "sys3": 0.1,
+                    "sys3+sys4": 0.6
+                }
+            }
+        }
+    },
+    "modifiers": {
+        "modifier_1":{"effect":"+1 effect", "description":"Some effect is applied to this vehicle"}
+    }
+}

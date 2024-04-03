@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://daym38snah5ke"]
+
+[ext_resource type="Script" path="res://code/vehicle_control.gd" id="1_df8uo"]
+
+[node name="vehicle_template" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_df8uo")
+
+[node name="edit_name" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 19.0
+offset_right = 333.0
+offset_bottom = 50.0
+text = "vehicle_template"
+
+[node name="label_name_input" type="Label" parent="."]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 19.0
+offset_right = 125.0
+offset_bottom = 50.0
+text = "Unit name:  "
+vertical_alignment = 1
+
+[node name="sprite_scheme" type="Sprite2D" parent="."]
+position = Vector2(39, 50)
+offset = Vector2(128, 94)
+
+[connection signal="text_submitted" from="edit_name" to="." method="_on_line_edit_text_submitted"]

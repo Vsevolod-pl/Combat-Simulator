@@ -1,81 +1,74 @@
-[gd_scene load_steps=2 format=3 uid="uid://dj21ke1wqj8hj"]
+[gd_scene load_steps=3 format=3 uid="uid://dj21ke1wqj8hj"]
 
-[ext_resource type="Texture2D" uid="uid://cas72mmlbsm80" path="res://sample.png" id="1_vxf0c"]
+[ext_resource type="Script" path="res://code/main.gd" id="1_q6by3"]
+[ext_resource type="Script" path="res://code/tab_vehicles.gd" id="2_5qrw6"]
 
-[node name="Control" type="Control"]
+[node name="main" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_q6by3")
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_right = 102.0
-offset_bottom = 31.0
-scale = Vector2(1.5, 1.32)
+[node name="button_new_session" type="Button" parent="."]
+layout_mode = 1
+offset_right = 150.0
+offset_bottom = 50.0
 text = "new session"
 
-[node name="Button2" type="Button" parent="."]
-offset_left = 159.0
-offset_top = 3.0
-offset_right = 262.0
-offset_bottom = 34.0
-scale = Vector2(1.5, 1.294)
+[node name="button_open_session" type="Button" parent="."]
+layout_mode = 0
+offset_left = 150.0
+offset_right = 300.0
+offset_bottom = 50.0
 text = "load session"
 
-[node name="Button3" type="Button" parent="."]
-offset_left = 324.0
-offset_top = 2.0
-offset_right = 429.0
-offset_bottom = 33.0
-scale = Vector2(1.5, 1.294)
+[node name="button_save_session" type="Button" parent="."]
+layout_mode = 0
+offset_left = 300.0
+offset_right = 450.0
+offset_bottom = 50.0
 text = "save session"
 
-[node name="Button4" type="Button" parent="."]
-offset_left = 494.0
-offset_top = -5.0
-offset_right = 596.0
-offset_bottom = 26.0
-scale = Vector2(1.5, 1.294)
+[node name="button_open_unit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 450.0
+offset_right = 600.0
+offset_bottom = 50.0
 text = "add unit"
 
-[node name="Button5" type="Button" parent="."]
-offset_left = 662.0
-offset_top = 1.0
-offset_right = 765.0
-offset_bottom = 32.0
-scale = Vector2(1.5, 1.294)
+[node name="button_remove_unit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 600.0
+offset_right = 750.0
+offset_bottom = 50.0
 text = "remove unit"
 
-[node name="Button6" type="Button" parent="."]
-offset_left = 832.0
-offset_top = 3.0
-offset_right = 937.0
-offset_bottom = 34.0
-scale = Vector2(1.5, 1.294)
+[node name="button_save_unit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 750.0
+offset_right = 900.0
+offset_bottom = 50.0
 text = "save unit"
 
-[node name="TabContainer" type="TabContainer" parent="."]
+[node name="tab_vehicles" type="TabContainer" parent="."]
 layout_mode = 0
-offset_left = 67.0
-offset_top = 164.0
-offset_right = 107.0
-offset_bottom = 204.0
+offset_top = 50.0
+offset_right = 1280.0
+offset_bottom = 720.0
 clip_tabs = false
+script = ExtResource("2_5qrw6")
 
-[node name="Default Vehicle" type="HFlowContainer" parent="TabContainer"]
-layout_mode = 2
+[node name="file_dialog" type="FileDialog" parent="."]
+initial_position = 1
+size = Vector2i(640, 480)
+access = 2
 
-[node name="TextEdit" type="TextEdit" parent="TabContainer/Default Vehicle"]
-layout_mode = 2
-placeholder_text = "vehicle name"
-
-[node name="Sprite2D" type="Sprite2D" parent="TabContainer/Default Vehicle"]
-position = Vector2(452, 64)
-texture = ExtResource("1_vxf0c")
-
-[node name="Another vehicle" type="HFlowContainer" parent="TabContainer"]
-visible = false
-layout_mode = 2
+[connection signal="pressed" from="button_new_session" to="." method="_on_button_new_session_pressed"]
+[connection signal="pressed" from="button_open_session" to="." method="_on_button_open_session_pressed"]
+[connection signal="pressed" from="button_save_session" to="." method="_on_button_save_session_pressed"]
+[connection signal="pressed" from="button_open_unit" to="." method="_on_button_open_unit_pressed"]
+[connection signal="pressed" from="button_save_unit" to="." method="_on_button_save_unit_pressed"]
+[connection signal="file_selected" from="file_dialog" to="." method="_on_file_dialog_file_selected"]

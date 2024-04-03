@@ -1,0 +1,8 @@
+{
+    "vehicles": [
+        "./vehicle_template/vehicle_template.json",
+        "./vehicle_template/vehicle_template.json",
+        "./vehicle_template/vehicle_template.json",
+        "./vehicle_template/vehicle_template.json"
+    ]
+}
