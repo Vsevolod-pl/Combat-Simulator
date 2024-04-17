@@ -9,23 +9,30 @@ script = ExtResource("1_df8uo")
 
 [node name="edit_name" type="LineEdit" parent="."]
 layout_mode = 0
-offset_left = 133.0
-offset_top = 19.0
-offset_right = 333.0
-offset_bottom = 50.0
+offset_left = 101.0
+offset_top = 3.0
+offset_right = 301.0
+offset_bottom = 34.0
 text = "vehicle_template"
 
 [node name="label_name_input" type="Label" parent="."]
 layout_mode = 0
-offset_left = 39.0
-offset_top = 19.0
-offset_right = 125.0
-offset_bottom = 50.0
+offset_left = 7.0
+offset_top = 3.0
+offset_right = 101.0
+offset_bottom = 34.0
 text = "Unit name:  "
 vertical_alignment = 1
 
 [node name="sprite_scheme" type="Sprite2D" parent="."]
-position = Vector2(39, 50)
+position = Vector2(7, 40)
 offset = Vector2(128, 94)
+
+[node name="scrollbar_systems" type="VScrollBar" parent="."]
+layout_mode = 0
+offset_left = 1272.0
+offset_top = 3.0
+offset_right = 1280.0
+offset_bottom = 11.0
 
 [connection signal="text_submitted" from="edit_name" to="." method="_on_line_edit_text_submitted"]

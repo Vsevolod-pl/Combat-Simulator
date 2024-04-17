@@ -2,6 +2,7 @@ extends Control
 
 
 @onready var edit_name = $edit_name
+var datadict = {}
 
 
 # Called when the node enters the scene tree for the first time.

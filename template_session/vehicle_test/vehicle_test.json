@@ -1,0 +1,219 @@
+{
+    "name": "vehicle test",
+    "icon": "./img.jpg",
+    "scheme": "./sample.png",
+    "systems": {
+        "sys1": {
+            "name": "1 system name",
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100,
+            "image":""
+        },
+        "sys2": {
+            "name": "2 system name",
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        },
+        "sys3": {
+            "name": "3 system name",
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        },
+        "sys4": {
+            "name": "4 system name",
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        },
+        "sys5": {
+            "name": "4 system name",
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        },
+        "sys6": {
+            "name": "4 system name",
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        },
+        "sys7": {
+            "name": "4 system name",
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        },
+        "sys8": {
+            "name": "4 system name",
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        },
+        "sys9": {
+            "name": "4 system name",
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        },
+        "sys10": {
+            "name": "4 system name",
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        },
+        "sys11": {
+            "name": "4 system name",
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        },
+        "sys12": {
+            "name": "4 system name",
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        },
+        "sys13": {
+            "name": "4 system name",
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        },
+        "sys14": {
+            "name": "4 system name",
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        },
+        "sys15": {
+            "name": "4 system name",
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        },
+        "sys16": {
+            "name": "4 system name",
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        },
+        "sys17": {
+            "name": "4 system name",
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        },
+        "sys18": {
+            "name": "4 system name",
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        },
+        "sys19": {
+            "name": "4 system name",
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        },
+        "sys20": {
+            "name": "4 system name",
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        },
+        "sys21": {
+            "name": "4 system name",
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        },
+        "sys22": {
+            "name": "4 system name",
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        },
+        "sys23": {
+            "name": "4 system name",
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        },
+        "sys24": {
+            "name": "4 system name",
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        },
+        "sys25": {
+            "name": "4 system name",
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        },
+        "sys26": {
+            "name": "4 system name",
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        },
+        "sys27": {
+            "name": "4 system name",
+            "desctiption": "There must be some description",
+            "full_health": 100,
+            "current_health": 100
+        }
+    },
+    "projections": {
+        "proj1":{
+            "sec1": {
+                "hit_prob":0.5,
+                "systems": ["sys1", "sys3"],
+                "probs":{
+                    "miss": 0.2,
+                    "sys1": 0.1,
+                    "sys3": 0.1,
+                    "sys1+sys3": 0.6
+                }
+            },
+            "sec2": {
+                "hit_prob":0.5,
+                "systems": ["sys2", "sys4"],
+                "probs":{
+                    "miss": 0.2,
+                    "sys4": 0.1,
+                    "sys2": 0.1,
+                    "sys4+sys2": 0.6
+                }
+            }
+        },
+        "proj2":{
+            "sec3": {
+                "hit_prob":0.5,
+                "systems": ["sys1", "sys2"],
+                "probs":{
+                    "miss": 0.2,
+                    "sys1": 0.1,
+                    "sys2": 0.1,
+                    "sys1+sys2": 0.6
+                }
+            },
+            "sec_lol": {
+                "hit_prob":0.5,
+                "systems": ["sys3", "sys4"],
+                "probs":{
+                    "miss": 0.2,
+                    "sys4": 0.1,
+                    "sys3": 0.1,
+                    "sys3+sys4": 0.6
+                }
+            }
+        }
+    },
+    "modifiers": {
+        "modifier_1":{"effect":"+1 effect", "description":"Some effect is applied to this vehicle"}
+    }
+}

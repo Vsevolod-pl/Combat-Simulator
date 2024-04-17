@@ -31,6 +31,13 @@ func load_session(path):
 		var veh_path = path.substr(0, path.rfind("/"))+"/"+vehicle_path
 		tab_vehicles.load_unit(veh_path)
 
+func save_session(path):
+	var selected_tab = tab_vehicles.current_tab
+	for i in range(tab_vehicles.get_tab_count()):
+		tab_vehicles.current_tab = i
+	
+	tab_vehicles.current_tab = selected_tab
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -82,6 +89,6 @@ func _on_file_dialog_file_selected(path):
 		FileDialogState.OPEN_UNIT:
 			tab_vehicles.load_unit(path)
 		FileDialogState.SAVE_SESSION:
-			pass
+			save_session(path)
 		FileDialogState.SAVE_UNIT:
-			pass
+			tab_vehicles.save_unit(path)

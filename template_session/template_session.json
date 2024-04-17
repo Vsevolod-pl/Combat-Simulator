@@ -1,7 +1,7 @@
 {
     "vehicles": [
         "./vehicle_template/vehicle_template.json",
-        "./vehicle_template/vehicle_template.json",
+        "./vehicle_test/vehicle_test.json",
         "./vehicle_template/vehicle_template.json",
         "./vehicle_template/vehicle_template.json"
     ]
